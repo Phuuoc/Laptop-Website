@@ -36,11 +36,11 @@ const productSchema = mongsose.Schema({
         required:[true,"Please enter Product Category"],
         
     },
-    Stock:{
+    Stock: {
         type:Number,
         required:[true,"Please enter Product Stock"],
         maxLength:[4,"Stock cannot exeed 4 characters"],
-        default:1
+        default:1,
     },
     numofReviews:{
         type: Number,
