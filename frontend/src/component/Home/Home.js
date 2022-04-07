@@ -1,51 +1,45 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { CgMouse } from "react-icons/all";
 import "./Home.css";
-import Product from "./Product.js";
+import Product from "../Product/Product"
 import MetaData from "../layout/MetaData";
+import { getProduct} from "../../actions/productAction";
+import { useSelector, useDispatch } from "react-redux";
 
 
-const product = {
-     name: "Laptop Dell ",
-     images: [{ url: "https://www.laptopvip.vn/images/detailed/22/awm17-r3-cnb-05000ff090-gy-tobii-www.laptopvip.vn-1620792655.png"}],
-     price: "$1000",
-     _id: "phuoc",
- };
 
 const Home = () => {
+    const dispatch = useDispatch();
+    const { products } = useSelector(state => state.products);
+
+    useEffect(() => {
+        dispatch(getProduct());
+    }, [dispatch]);
+    
     return(
         <Fragment>
-            <MetaData title="Laptop Website"/>
+      
+                    <Fragment>
+                    <MetaData title="Laptop Website"/>
+        
+                    <div className="banner">
+                        <p>Welcome</p>
+                        <h1>Find Product Below</h1>
+        
+                        <a href="#container">
+                             <button type="button">
+                               Scroll <CgMouse />
+                            </button>
+                        </a>
+                    </div>
+                    <h2 className="homeHeading">Feartured Products</h2>
+                    <div className='container' id='container'>
+                        {products && products.map((product) => <Product product ={product}/> )}
 
-
-            <div className="banner">
-                <p>Welcome</p>
-                <h1>Find Product Below</h1>
-
-                <a href="#container">
-                     <button type="button">
-                       Scroll <CgMouse />
-                    </button>
-                </a>
-            </div>
-
-            <h2 className="homeHeading">Feartured Products</h2>
-
-            <div className="container" id="container">
-                <Product product={product}/>
-                <Product product={product}/>
-                <Product product={product}/>
-                <Product product={product}/>
-
-                <Product product={product}/>
-                <Product product={product}/>
-                <Product product={product}/>
-                <Product product={product}/>
-                
-                
-            </div>
+                    </div>
+                </Fragment>
         </Fragment>
     );
 };
 
-export default Home;
+export default Home;    
