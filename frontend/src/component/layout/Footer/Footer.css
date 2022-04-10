@@ -14,7 +14,7 @@ footer {
     align-items: center;
 }
 .leftFooter > h4 {
-    font-family: "Roboto";
+    font-family: "";
     font-size: 1vmax;
 }
 .leftFooter > p {
@@ -44,7 +44,7 @@ footer {
 }
 
 .rightfooter > h4 {
-    font-family: "Roboto";
+    font-family: "";
     font-size: 1.4vmax;
     text-decoration: underline;
 }
