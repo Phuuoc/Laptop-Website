@@ -38,7 +38,7 @@ export const getProduct =
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
 
-      let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}}`;
+      let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}`;
 
       if (category) {
         link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&category=${category}`;

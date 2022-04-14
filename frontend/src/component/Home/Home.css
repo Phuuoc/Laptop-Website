@@ -1,5 +1,8 @@
 .banner {
-    background-image:  linear-gradient(to right, #4ba1d3, #17d3da);
+    background-image: url("../../images/cover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vmin;
     display: flex;
     flex-direction: column;
@@ -7,7 +10,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-}
+  }
 
 .banner > h1 {
     margin: 5vmax;
