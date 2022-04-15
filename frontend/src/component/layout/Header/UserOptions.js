@@ -38,13 +38,13 @@ const UserOptions = ({ user }) => {
   if (user.role === "admin") {
     options.unshift({
       icon: <DashboardIcon />,
-      name: "Dashboard",
+      name: "Management",
       func: dashboard,
     });
   }
 
   function dashboard() {
-    history.push("/admin/dashboard");
+    history.push("/admin/products");
   }
 
   function orders() {

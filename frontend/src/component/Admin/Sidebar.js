@@ -1,6 +1,6 @@
 import React from "react";
 import "./sidebar.css";
-//import logo from "../../images/logo.png";
+import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
 import { TreeView, TreeItem } from "@material-ui/lab";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -15,14 +15,14 @@ import RateReviewIcon from "@material-ui/icons/RateReview";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      {/* <Link to="/">
+      <Link to="/">
         <img src={logo} alt="Ecommerce" />
-      </Link> */}
-      <Link to="/admin/dashboard">
+      </Link>
+      {/* <Link to="/admin/dashboard">
         <p>
           <DashboardIcon /> Dashboard
         </p>
-      </Link>
+      </Link> */}
       <Link>
         <TreeView
           defaultCollapseIcon={<ExpandMoreIcon />}

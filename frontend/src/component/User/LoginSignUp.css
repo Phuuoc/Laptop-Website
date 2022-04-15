@@ -90,7 +90,7 @@
   text-decoration: none;
   align-self: flex-end;
   transition: all 0.5s;
-  font: 500 0.8vmax "Roboto";
+  font: 500 0.8vmax "Gill Sans";
 }
 
 .loginForm > a:hover {
@@ -129,7 +129,7 @@
   border: none;
   background-color: tomato;
   color: white;
-  font: 300 0.9vmax "";
+  font: 300 0.9vmax "Roboto";
   width: 100%;
   padding: 0.8vmax;
   cursor: pointer;

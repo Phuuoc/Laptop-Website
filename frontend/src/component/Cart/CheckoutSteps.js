@@ -11,10 +11,10 @@ const CheckoutSteps = ({ activeStep }) => {
       label: <Typography>Shipping Details</Typography>,
       icon: <LocalShippingIcon />,
     },
-    {
-      label: <Typography>Confirm Order</Typography>,
-      icon: <LibraryAddCheckIcon />,
-    },
+    // {
+    //   label: <Typography>Confirm Order</Typography>,
+    //   icon: <LibraryAddCheckIcon />,
+    // },
     {
       label: <Typography>Payment</Typography>,
       icon: <AccountBalanceIcon />,
