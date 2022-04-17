@@ -5,11 +5,20 @@ import { clearErrors, getProduct } from "../../actions/productAction";
 import Loader from "../layout/Loader/Loader";
 import ProductCard from "../Home/ProductCard";
 import Pagination from "react-js-pagination";
-import Slider from "@material-ui/core/Slider";
+// import Slider from "@material-ui/core/Slider";
 import { useAlert } from "react-alert";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import MetaData from "../layout/MetaData";
 
+// const categories = [
+//   "Laptop",
+//   "Footwear",
+//   "Bottom",
+//   "Tops",
+//   "Attire",
+//   "Camera",
+//   "SmartPhones",
+// ];
 
 const Products = ({ match }) => {
   const dispatch = useDispatch();
@@ -17,6 +26,7 @@ const Products = ({ match }) => {
   const alert = useAlert();
 
   const [currentPage, setCurrentPage] = useState(1);
+
 
 
   const {
@@ -34,7 +44,7 @@ const Products = ({ match }) => {
     setCurrentPage(e);
   };
 
- 
+
   let count = filteredProductsCount;
 
   useEffect(() => {
@@ -43,8 +53,8 @@ const Products = ({ match }) => {
       dispatch(clearErrors());
     }
 
-    dispatch(getProduct(keyword, currentPage, ));
-  }, [dispatch, keyword, currentPage,  alert, error]);
+    dispatch(getProduct(keyword, currentPage,));
+  }, [dispatch, keyword, currentPage, alert, error]);
 
   return (
     <Fragment>
@@ -61,6 +71,8 @@ const Products = ({ match }) => {
                 <ProductCard key={product._id} product={product} />
               ))}
           </div>
+
+        
           {resultPerPage < count && (
             <div className="paginationBox">
               <Pagination

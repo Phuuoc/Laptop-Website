@@ -11,10 +11,10 @@ const CheckoutSteps = ({ activeStep }) => {
       label: <Typography>Shipping Details</Typography>,
       icon: <LocalShippingIcon />,
     },
-    // {
-    //   label: <Typography>Confirm Order</Typography>,
-    //   icon: <LibraryAddCheckIcon />,
-    // },
+    {
+      label: <Typography>Confirm Order</Typography>,
+      icon: <LibraryAddCheckIcon />,
+    },
     {
       label: <Typography>Payment</Typography>,
       icon: <AccountBalanceIcon />,
@@ -36,7 +36,7 @@ const CheckoutSteps = ({ activeStep }) => {
           >
             <StepLabel
               style={{
-                color: activeStep >= index ? "tomato" : "rgba(0, 0, 0, 0.649)",
+                color: activeStep >= index ? "blue" : "rgba(0, 0, 0, 0.649)",
               }}
               icon={item.icon}
             >
