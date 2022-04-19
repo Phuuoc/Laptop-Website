@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer id="footer">
       <div className="leftFooter">
-        <h4>DOWNLOAD OUR APP</h4>
-        <p>Download App for Android and IOS mobile phone</p>
+        <h4>About Us</h4>
+        <p>Our mission is to give you the best experience </p>
 
       </div>
 
       <div className="midFooter">
-        <h1>Laptop Website.</h1>
+        <h1>ALW Website.</h1>
         <p>High Quality is our first priority</p>
 
         <p>Copyrights 2022 &copy; Nguyen Tan Phuoc</p>
