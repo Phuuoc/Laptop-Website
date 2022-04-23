@@ -28,13 +28,10 @@ const NewProduct = ({ history }) => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Laptop",
-    "Footwear",
-    "Bottom",
-    "Tops",
-    "Attire",
-    "Camera",
-    "SmartPhones",
+    "i5",
+    "i7",
+    "i9",
+ 
   ];
 
   useEffect(() => {
@@ -45,7 +42,7 @@ const NewProduct = ({ history }) => {
 
     if (success) {
       alert.success("Product Created Successfully");
-      history.push("/admin/dashboard");
+      history.push("/admin/products");
       dispatch({ type: NEW_PRODUCT_RESET });
     }
   }, [dispatch, alert, error, history, success]);
@@ -89,7 +86,7 @@ const NewProduct = ({ history }) => {
 
   return (
     <Fragment>
-      <MetaData title="Create Product" />
+      <MetaData title="Add new Product" />
       <div className="dashboard">
         <SideBar />
         <div className="newProductContainer">
@@ -98,7 +95,7 @@ const NewProduct = ({ history }) => {
             encType="multipart/form-data"
             onSubmit={createProductSubmitHandler}
           >
-            <h1>Create Product</h1>
+            <h1>Add new Product</h1>
 
             <div>
               <SpellcheckIcon />
