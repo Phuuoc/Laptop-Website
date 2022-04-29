@@ -120,12 +120,12 @@ const OrderList = ({ history }) => {
 
   return (
     <Fragment>
-      <MetaData title={`ALL ORDERS - Admin`} />
+      <MetaData title={`ORDERS MANAGEMENT - Admin`} />
 
       <div className="dashboard">
         <SideBar />
         <div className="productListContainer">
-          <h1 id="productListHeading">ALL ORDERS</h1>
+          <h1 id="productListHeading">ORDERS MANAGEMENT</h1>
 
           <DataGrid
             rows={rows}

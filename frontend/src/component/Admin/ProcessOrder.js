@@ -85,7 +85,7 @@ const ProcessOrder = ({ history, match }) => {
                       <p>Address:</p>
                       <span>
                         {order.shippingInfo &&
-                          `${order.shippingInfo.address}, ${order.shippingInfo.city}, ${order.shippingInfo.state}, ${order.shippingInfo.pinCode}, ${order.shippingInfo.country}`}
+                          `${order.shippingInfo.address}, ${order.shippingInfo.city}, S ${order.shippingInfo.country}`}
                       </span>
                     </div>
                   </div>
@@ -163,7 +163,7 @@ const ProcessOrder = ({ history, match }) => {
                   <div>
                     <AccountTreeIcon />
                     <select onChange={(e) => setStatus(e.target.value)}>
-                      <option value="">Choose Category</option>
+                      <option value="">Change Status</option>
                       {order.orderStatus === "Processing" && (
                         <option value="Shipped">Shipped</option>
                       )}
@@ -181,7 +181,7 @@ const ProcessOrder = ({ history, match }) => {
                       loading ? true : false || status === "" ? true : false
                     }
                   >
-                    Process
+                    Confirm
                   </Button>
                 </form>
               </div>
